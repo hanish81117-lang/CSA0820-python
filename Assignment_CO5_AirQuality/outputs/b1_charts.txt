@@ -1,0 +1,1 @@
+charts saved; worst hours: [(18, 79.6), (8, 79.6)]

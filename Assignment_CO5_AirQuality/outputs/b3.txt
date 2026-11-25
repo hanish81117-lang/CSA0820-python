@@ -1,0 +1,12 @@
+three methods on 56 station-days: all agree -> True
+
+stations  rows        loops(s)  pandas(s)  sql(s)
+      1      8,760     0.012     0.007   0.012
+     12    105,120     0.148     0.053   0.142
+    120  1,051,200     1.433     0.526   1.657
+
+cProfile of the plain-Python version, 12 stations:
+   0.089s total          1 calls  means_loops
+   0.106s total          1 calls  make_csv
+   0.133s total    105,121 calls  __next__
+   0.072s total    105,120 calls  gauss

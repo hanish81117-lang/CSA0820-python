@@ -1,0 +1,15 @@
+54.0 108.0
+None
+
+string-built query: SELECT station, pm25 FROM aq WHERE station = 'Adyar' OR '1'='1'
+injection with + returns: 4 rows (ALL of them - attack works)
+placeholder returns: [] (treated as a literal name)
+
+missing column: column 'pm25' missing (found ['station', 'date', 'humidity']) - reported, nothing loaded
+wrong delimiter: column 'pm25' missing (found ['station;date;pm25']) - reported, nothing loaded
+empty file: no data rows - reported, nothing loaded
+
+score -1 -> negative | should be: negative (sarcasm)           | Yeah, great, another morning of smoke.
+score +1 -> positive | should be: positive (double negative)   | The air is not bad today.
+score +0 -> neutral  | should be: mixed - genuinely both       | The park is clean but the road is dirty.
+score +2 -> positive | should be: positive                     | Not bad, service improved.

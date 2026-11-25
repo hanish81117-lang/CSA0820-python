@@ -1,0 +1,16 @@
+positive | Roads are clean and the bus was fast.
+negative | Smoke from the factory, air is bad.
+negative | The staff were not helpful.
+positive | Not bad, service improved.
+
+50 complaints: scorer agrees with my reading on 48/50
+  wrong: got neutral  should be positive | Smoke from tea shops in the morning is not bad.
+  wrong: got neutral  should be positive | School zone traffic is slow but helpful police are there.
+
+summary of the 50 complaints: ['The bus stand is clean now, good work', 'Fog and smoke mixed this morning, visibility bad']
+
+200,000 rows, one station-day query: no index 0.0071s, with index 0.000052s
+
+chatbot: The average PM2.5 in Adyar is 54.0 ug/m3.
+chatbot: Sorry, I can only answer PM2.5 questions for known stations.
+chatbot: Sorry, I can only answer PM2.5 questions for known stations.
